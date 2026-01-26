@@ -1,54 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-bakery-bg: rgb(247, 242, 235);        
-  --color-bakery-primary: rgb(220, 180, 140);   
+  --color-hotpink: hotpink;
 
-  --color-bakery-text: rgb(45, 30, 20);         
-  --color-bakery-heading: rgb(62, 42, 28);      
-  --color-bakery-text-soft: rgb(120, 90, 60);   
+  --color-bakery-bg: rgb(247, 242, 235);
+  --color-bakery-primary: rgb(220, 180, 140);
 
-  --color-bakery-accent: rgb(46, 94, 62);       
-  --color-bakery-accent-soft: rgb(191, 216, 184);
- 
-  --color-bakery-link-hover: rgb(30, 70, 45);   
+  --color-bakery-text: rgb(45, 30, 20);
+  --color-bakery-heading: rgb(62, 42, 28);
+  --color-bakery-text-soft: rgb(120, 90, 60);
 
-  --color-bakery-button-primary-bg: rgb(46, 94, 62);
-  --color-bakery-button-primary-bg-hover: rgb(36, 74, 52);
+  --color-bakery-accent-green: #41553a;
+  --color-bakery-accent-green-hover: #32432c;
+  --color-bakery-accent-green-soft: rgb(191, 216, 184);
+  --color-bakery-accent-light-brown: #d9c4b2;
+
+  --color-bakery-button-primary-bg: var(--color-bakery-accent-green);
+  --color-bakery-button-primary-bg-hover: var(--color-bakery-accent-green-hover);
   --color-bakery-button-primary-border: rgb(30, 70, 45);
   --color-bakery-button-primary-border-hover: rgb(20, 50, 35);
 
-  --color-baker-button-soft-bg: rgba(191, 216, 184, 0.5);
-  --color-baker-button-soft-bg-hover: rgba(170, 200, 160, 0.5);
-  --color-baker-button-soft-border: rgb(170, 200, 160);
-  --color-baker-button-soft-border-hover: rgb(150, 180, 140);
-}
-
-:root {
-  --color-slay: rgb(191, 216, 184); /* #BFD8B8 */
+  --color-bakery-button-soft-bg: rgba(191, 216, 184, 0.5);
+  --color-bakery-button-soft-bg-hover: rgba(170, 200, 160, 0.5);
+  --color-bakery-button-soft-border: rgb(170, 200, 160);
+  --color-bakery-button-soft-border-hover: rgb(150, 180, 140);
 }
 
 @layer base {
   body {
-    @apply bg-bakery-bg text-bakery-text font-sans;
+    @apply bg-bakery-bg text-bakery-text font-sans text-base;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-bakery-heading;
   }
 
   h1 {
-    @apply text-6xl font-bold;
+    @apply text-6xl max-sm:text-5xl font-bold;
   }
 
   h2 {
-    @apply text-3xl font-semibold;
+    @apply text-3xl max-sm:text-2xl font-semibold;
   }
 
   h3 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl max-sm:text-xl font-semibold;
   }
 
   a {
@@ -56,23 +59,23 @@
   }
 
   a:hover {
-    @apply text-bakery-link-hover;
+    @apply text-bakery-accent-green-hover;
   }
 
   /* TODO Oursource in Button component */
   button {
-    @apply transition-colors duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl;
+    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3;
   }
 
   .button-primary {
-    @apply bg-bakery-button-primary-bg border-bakery-button-primary-border hover:bg-bakery-button-primary-bg-hover hover:border-bakery-button-primary-border-hover ;
+    @apply bg-bakery-button-primary-bg border-bakery-button-primary-border hover:bg-bakery-button-primary-bg-hover hover:border-bakery-button-primary-border-hover;
   }
 
   .button-secondary {
-    @apply bg-transparent border-white;
+    @apply bg-transparent border-white hover:bg-white/10 hover:border-bakery-accent-light-brown;
   }
 
   .button-soft {
-    @apply bg-baker-button-soft-bg border-baker-button-soft-border hover:bg-baker-button-soft-bg-hover hover:border-baker-button-soft-border-hover ;
+    @apply bg-bakery-button-soft-bg border-bakery-button-soft-border hover:bg-bakery-button-soft-bg-hover hover:border-bakery-button-soft-border-hover;
   }
 }
