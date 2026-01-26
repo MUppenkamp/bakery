@@ -1,3 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+@theme {
+  --color-bakery-bg: rgb(247, 242, 235);        
+  --color-bakery-primary: rgb(220, 180, 140);   
+
+  --color-bakery-text: rgb(45, 30, 20);         
+  --color-bakery-heading: rgb(62, 42, 28);      
+  --color-bakery-text-soft: rgb(120, 90, 60);   
+
+  --color-bakery-accent: rgb(46, 94, 62);       
+  --color-bakery-accent-soft: rgb(191, 216, 184);
+ 
+  --color-bakery-link-hover: rgb(30, 70, 45);   
+
+  --color-bakery-button-primary-bg: rgb(46, 94, 62);
+  --color-bakery-button-primary-bg-hover: rgb(36, 74, 52);
+  --color-bakery-button-primary-border: rgb(30, 70, 45);
+  --color-bakery-button-primary-border-hover: rgb(20, 50, 35);
+
+  --color-baker-button-soft-bg: rgba(191, 216, 184, 0.5);
+  --color-baker-button-soft-bg-hover: rgba(170, 200, 160, 0.5);
+  --color-baker-button-soft-border: rgb(170, 200, 160);
+  --color-baker-button-soft-border-hover: rgb(150, 180, 140);
+}
+
+:root {
+  --color-slay: rgb(191, 216, 184); /* #BFD8B8 */
+}
+
+@layer base {
+  body {
+    @apply bg-bakery-bg text-bakery-text font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-bakery-heading;
+  }
+
+  h1 {
+    @apply text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  a {
+    @apply text-bakery-text-soft no-underline;
+  }
+
+  a:hover {
+    @apply text-bakery-link-hover;
+  }
+
+  /* TODO Oursource in Button component */
+  button {
+    @apply transition-colors duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl;
+  }
+
+  .button-primary {
+    @apply bg-bakery-button-primary-bg border-bakery-button-primary-border hover:bg-bakery-button-primary-bg-hover hover:border-bakery-button-primary-border-hover ;
+  }
+
+  .button-secondary {
+    @apply bg-transparent border-white;
+  }
+
+  .button-soft {
+    @apply bg-baker-button-soft-bg border-baker-button-soft-border hover:bg-baker-button-soft-bg-hover hover:border-baker-button-soft-border-hover ;
+  }
+}
