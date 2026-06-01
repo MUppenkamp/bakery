@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { featherArrowRight } from '@ng-icons/feather-icons';
 
 @Component({
-  imports: [],
+  imports: [NgIcon],
   selector: 'app-hero',
   templateUrl: 'hero.component.html',
+  viewProviders: [provideIcons({ featherArrowRight })],
 })
 export class HeroComponent {}

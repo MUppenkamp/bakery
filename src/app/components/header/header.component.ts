@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { featherMenu } from '@ng-icons/feather-icons';
 
 @Component({
-  imports: [],
+  imports: [NgIcon],
   selector: 'app-header',
   templateUrl: 'header.component.html',
+  viewProviders: [provideIcons({ featherMenu })],
 })
 export class HeaderComponent {
   protected readonly items = [
