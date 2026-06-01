@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProductComponent } from './product/product.component';
+import { ProductsService } from '../../services/products.services';
 
 @Component({
-  imports: [],
+  imports: [ProductComponent],
   selector: 'app-products',
-  templateUrl: 'products.component.html'
+  templateUrl: 'products.component.html',
 })
-
-export class ProductsComponent{
+export class ProductsComponent {
+  protected readonly productsService = inject(ProductsService);
 }
