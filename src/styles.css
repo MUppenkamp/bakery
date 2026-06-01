@@ -30,7 +30,7 @@
 
 @layer base {
   body {
-    @apply bg-bakery-bg text-bakery-text font-sans text-base min-inline-90;
+    @apply bg-bakery-bg text-bakery-text font-sans text-base min-w-90;
   }
 
   h1,
