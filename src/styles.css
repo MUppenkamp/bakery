@@ -74,7 +74,7 @@
     @apply text-bakery-heading text-xl font-bold;
   }
 
-  /* TODO Oursource in Button component */
+  /* TODO https://github.com/MUppenkamp/bakery/issues/9 */
   button {
     @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3;
   }
@@ -92,6 +92,6 @@
   }
 
   ng-icon {
-    @apply text-bakery-text-soft! hover:text-bakery-accent-green-hover! w-5! h-5! cursor-pointer transition-colors duration-200;
+    @apply w-5! h-5! cursor-pointer transition-colors duration-200;
   }
 }
