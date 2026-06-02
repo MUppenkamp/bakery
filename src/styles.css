@@ -16,6 +16,7 @@
   --color-bakery-accent-green-hover: #32432c;
   --color-bakery-accent-green-soft: rgb(191, 216, 184);
   --color-bakery-accent-light-brown: #d9c4b2;
+  --color-bakery-accent-rose: rgb(230, 184, 192);
 
   --color-bakery-button-primary-bg: var(--color-bakery-accent-green);
   --color-bakery-button-primary-bg-hover: var(--color-bakery-accent-green-hover);
@@ -29,6 +30,14 @@
 }
 
 @layer base {
+  app-root {
+    @apply flex flex-col min-h-screen;
+  }
+
+  main {
+    @apply flex-1;
+  }
+
   body {
     @apply bg-bakery-bg text-bakery-text font-sans text-base min-w-90;
   }
