@@ -1,13 +1,8 @@
 <app-hero />
 <div class="p-6">
-  <app-carousel
-    [itemCount]="productsService.products$().length"
-    [showButtons]="true"
-    [autoplay]="true"
-    [autoplayInterval]="5000"
-  >
-    @for (card of productsService.products$(); track card.id) {
-      <app-product #productContainerRef [product$]="card" />
+  <div class="flex gap-4 overflow-x-scroll pb-4">
+    @for (card of productsService.favoriteProducts$(); track card.id) {
+      <app-product [product$]="card" />
     }
-  </app-carousel>
+  </div>
 </div>
