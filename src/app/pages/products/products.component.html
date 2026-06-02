@@ -1,11 +1,14 @@
-@let products = productsService.products$();
+@let productsByCategory = productsService.productsByCategory$();
 <div class="p-6">
-  @if (products.length) {
-    <h2 class="text-center uppercase mb-10">Produkte</h2>
-    <div class="flex flex-wrap gap-x-6 gap-y-8">
-      @for (product of products; track product) {
-        <app-product class="grow" [product$]="product" />
-      }
+  <h2 class="text-center uppercase mb-10">Produkte</h2>
+  @for (productWithCategory of productsByCategory.keys(); track $index) {
+    <div class="mb-12">
+      <h3 class="pb-4">{{ productWithCategory }}</h3>
+      <div class="flex flex-wrap gap-x-6 gap-y-8">
+        @for (product of productsByCategory.get(productWithCategory); track product) {
+          <app-product class="grow" [product$]="product" />
+        }
+      </div>
     </div>
   }
 </div>
