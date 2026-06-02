@@ -8,14 +8,14 @@
     <button
       data-collapse-toggle="navbar-default"
       type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base sm:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
       aria-controls="navbar-default"
       aria-expanded="false"
     >
       <span class="sr-only">Open main menu</span>
       <ng-icon name="featherMenu" />
     </button>
-    <div class="hidden w-auto md:block" id="navbar-default">
+    <div class="hidden w-auto sm:block" id="navbar-default">
       <ul class="font-medium flex p-0 bg-neutral-secondary-soft flex-row space-x-8 mt-0 border-0">
         @for (item of items; track $index) {
           <li>
