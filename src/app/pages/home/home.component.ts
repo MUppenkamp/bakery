@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero.component';
-import { ProductsComponent } from '../../components/products/products.component';
 
 @Component({
-  imports: [HeroComponent, ProductsComponent],
+  imports: [HeroComponent],
   selector: 'app-home',
   templateUrl: 'home.component.html',
 })

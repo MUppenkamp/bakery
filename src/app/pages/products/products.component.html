@@ -1,0 +1,11 @@
+@let products = productsService.products$();
+<div class="p-6">
+  @if (products.length) {
+    <h2 class="text-center uppercase mb-10">Produkte</h2>
+    <div class="flex flex-wrap gap-x-6 gap-y-8">
+      @for (product of products; track product) {
+        <app-product class="grow" [product$]="product" />
+      }
+    </div>
+  }
+</div>

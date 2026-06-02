@@ -1,9 +1,9 @@
 import { Component, inject, input } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-import { Product } from '../../../types/product.types';
-import { ProductsService } from '../../../services/products.services';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { featherAlertCircle } from '@ng-icons/feather-icons';
+import { ProductsService } from '../../services/products.services';
+import { Product } from '../../types/product.types';
 
 @Component({
   imports: [CurrencyPipe, NgIcon],
