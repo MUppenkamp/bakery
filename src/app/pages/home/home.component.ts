@@ -1,11 +1,10 @@
 import { Component, inject, viewChild } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero.component';
-import { CarouselComponent } from '../../components/carousel/carousel.component';
 import { ProductsService } from '../../services/products.services';
 import { ProductComponent } from '../../components/product/product.component';
 
 @Component({
-  imports: [HeroComponent, CarouselComponent, ProductComponent],
+  imports: [HeroComponent, ProductComponent],
   selector: 'app-home',
   templateUrl: 'home.component.html',
 })
