@@ -1,2 +1,13 @@
 <app-hero />
-<div class="p-6">Home</div>
+<div class="p-6">
+  <app-carousel
+    [itemCount]="productsService.products$().length"
+    [showButtons]="true"
+    [autoplay]="true"
+    [autoplayInterval]="5000"
+  >
+    @for (card of productsService.products$(); track card.id) {
+      <app-product #productContainerRef [product$]="card" />
+    }
+  </app-carousel>
+</div>

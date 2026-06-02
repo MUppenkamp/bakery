@@ -1,9 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject, viewChild } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero.component';
+import { CarouselComponent } from '../../components/carousel/carousel.component';
+import { ProductsService } from '../../services/products.services';
+import { ProductComponent } from '../../components/product/product.component';
 
 @Component({
-  imports: [HeroComponent],
+  imports: [HeroComponent, CarouselComponent, ProductComponent],
   selector: 'app-home',
   templateUrl: 'home.component.html',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  protected readonly productsService = inject(ProductsService);
+
+  /**
+   * Ref to the product component
+   */
+  protected productComponentRef$ = viewChild<ProductComponent>('productRef');
+}

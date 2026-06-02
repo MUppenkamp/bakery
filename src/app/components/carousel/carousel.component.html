@@ -1,0 +1,48 @@
+<div class="carousel-wrapper relative w-full overflow-hidden" #wrapper>
+  <!-- Track: ng-content projiziert die Slides direkt rein -->
+  <div
+    class="carousel-track flex transition-transform duration-500 ease-in-out will-change-transform"
+    [style.transform]="trackTransform()"
+  >
+    <ng-content />
+  </div>
+</div>
+
+<!-- Dots + Buttons -->
+<div class="mt-6 flex flex-col items-center gap-4">
+  <div class="flex gap-2">
+    @for (dot of dotRange(); track $index) {
+      <button
+        (click)="goTo($index)"
+        [ngClass]="$index === currentIndex() ? 'bg-indigo-600 w-6' : 'bg-neutral-300 w-2'"
+        class="h-2 rounded-full transition-all duration-300"
+        [attr.aria-label]="'Slide ' + ($index + 1)"
+      ></button>
+    }
+  </div>
+
+  @if (showButtons) {
+    <div class="flex gap-3">
+      <button
+        (click)="prev()"
+        [disabled]="!canGoPrev()"
+        class="px-5 py-2 rounded-full text-sm font-medium border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 hover:border-neutral-400 transition disabled:opacity-30 disabled:cursor-not-allowed"
+      >
+        ← Zurück
+      </button>
+      <button
+        (click)="next()"
+        [disabled]="!canGoNext()"
+        class="px-5 py-2 rounded-full text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-700 transition disabled:opacity-30 disabled:cursor-not-allowed"
+      >
+        Weiter →
+      </button>
+    </div>
+  }
+
+  @if (autoplay && autoplayInterval > 0) {
+    <p class="text-xs text-neutral-400 tabular-nums">
+      Automatischer Wechsel alle {{ autoplayInterval / 1000 }}s
+    </p>
+  }
+</div>
