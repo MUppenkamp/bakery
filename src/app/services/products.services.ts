@@ -17,10 +17,11 @@ export class ProductsService {
       imageUrl: '/bread-and-cake.jpg',
       tags: [ProductTag.Bread, ProductTag.Vegan],
       category: 'Brot',
+      isFavorite: true,
     },
     {
       id: '2',
-      name: 'Hefe-Dinkelbrot',
+      name: 'Dinkel-Sauerteigbrot',
       description:
         'Mein OG Brot, das ich schon seit Jahren backe und das immer super ankommt. Es ist ein sehr saftiges Brot mit einer knusprigen Kruste und einem tollen Geschmack.',
       price: 4,
@@ -30,23 +31,24 @@ export class ProductsService {
     },
     {
       id: '3',
-      name: 'Hefe-Dinkelbrot',
+      name: 'American Cookies',
       description:
         'Mein OG Brot, das ich schon seit Jahren backe und das immer super ankommt. Es ist ein sehr saftiges Brot mit einer knusprigen Kruste und einem tollen Geschmack.',
       price: 4,
       imageUrl: '/bread-and-cake.jpg',
       tags: [ProductTag.Bread, ProductTag.Vegan],
-      category: 'Brot',
+      category: 'Gebäck',
     },
     {
       id: '4',
-      name: 'Hefe-Dinkelbrot',
+      name: 'Erdbeer-Sahne-Torte',
       description:
         'Mein OG Brot, das ich schon seit Jahren backe und das immer super ankommt. Es ist ein sehr saftiges Brot mit einer knusprigen Kruste und einem tollen Geschmack.',
       price: 4,
       imageUrl: '/bread-and-cake.jpg',
       tags: [ProductTag.Bread, ProductTag.Vegan],
       category: 'Kuchen',
+      isFavorite: true,
     },
   ]);
 
@@ -78,6 +80,14 @@ export class ProductsService {
     });
 
     return productsByCategory;
+  });
+
+  /**
+   * Contains the products that are marked as favorite
+   */
+  public favoriteProducts$ = computed<Product[]>(() => {
+    const products = this.products$();
+    return products.filter((product) => product.isFavorite);
   });
 
   /**

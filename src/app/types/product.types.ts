@@ -6,6 +6,7 @@ export type Product = {
   imageUrl?: string;
   tags: ProductTag[];
   category: 'Brot' | 'Kuchen' | 'Gebäck';
+  isFavorite?: boolean;
 };
 
 /**
