@@ -15,6 +15,8 @@ export enum ProductTag {
   Bread,
   Cake,
   Pastry,
+  Vegetarian,
   Vegan,
+  Gluten,
   GlutenFree,
 }
