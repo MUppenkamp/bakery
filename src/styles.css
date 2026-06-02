@@ -31,11 +31,13 @@
 
 @layer base {
   app-root {
-    @apply flex flex-col min-h-screen;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
   }
 
   main {
-    @apply flex-1;
+    flex: 1;
   }
 
   body {
@@ -85,6 +87,10 @@
 
   /* TODO https://github.com/MUppenkamp/bakery/issues/9 */
   button {
+    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3;
+  }
+
+  .button {
     @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3;
   }
 
