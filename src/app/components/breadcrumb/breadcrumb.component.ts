@@ -4,11 +4,12 @@ import { featherMenu } from '@ng-icons/feather-icons';
 
 @Component({
   imports: [NgIcon],
-  selector: 'app-header',
-  templateUrl: 'header.component.html',
+  selector: 'app-breadcrumb',
+  templateUrl: 'breadcrumb.component.html',
   viewProviders: [provideIcons({ featherMenu })],
+  host: { class: 'sticky z-20 top-0 inset-s-0' },
 })
-export class HeaderComponent {
+export class BreadcrumbComponent {
   protected readonly items = [
     // TODO Maybe an icon to go to homepage
     { url: '', name: '🤎' },
