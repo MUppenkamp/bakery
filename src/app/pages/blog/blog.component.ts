@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'app-blog',
+  selector: 'monauppi-blog',
   templateUrl: 'blog.component.html',
 })
 export class BlogComponent {}

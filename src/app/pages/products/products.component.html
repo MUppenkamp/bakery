@@ -6,7 +6,7 @@
       <h3 class="pb-4">{{ productWithCategory }}</h3>
       <div class="flex flex-wrap gap-x-6 gap-y-8">
         @for (product of productsByCategory.get(productWithCategory); track product) {
-          <app-product class="grow" [product$]="product" />
+          <monauppi-product class="grow" [product$]="product" />
         }
       </div>
     </div>

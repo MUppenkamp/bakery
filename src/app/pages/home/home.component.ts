@@ -1,18 +1,13 @@
-import { Component, inject, viewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { ProductsService } from '../../services/products.services';
 import { ProductComponent } from '../../components/product/product.component';
 
 @Component({
   imports: [HeroComponent, ProductComponent],
-  selector: 'app-home',
+  selector: 'monauppi-home',
   templateUrl: 'home.component.html',
 })
 export class HomeComponent {
   protected readonly productsService = inject(ProductsService);
-
-  /**
-   * Ref to the product component
-   */
-  protected productComponentRef$ = viewChild<ProductComponent>('productRef');
 }

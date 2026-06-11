@@ -4,7 +4,7 @@ import { featherArrowRight } from '@ng-icons/feather-icons';
 
 @Component({
   imports: [NgIcon],
-  selector: 'app-hero',
+  selector: 'monauppi-hero',
   templateUrl: 'hero.component.html',
   viewProviders: [provideIcons({ featherArrowRight })],
 })

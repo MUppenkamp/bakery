@@ -7,7 +7,7 @@ import { Product } from '../../types/product.types';
 
 @Component({
   imports: [CurrencyPipe, NgIcon],
-  selector: 'app-product',
+  selector: 'monauppi-product',
   templateUrl: 'product.component.html',
   viewProviders: [provideIcons({ featherAlertCircle })],
 })

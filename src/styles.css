@@ -30,7 +30,7 @@
 }
 
 @layer base {
-  app-root {
+  monauppi-root {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
