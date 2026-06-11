@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint"
   },
   "prettier": {
     "printWidth": 100,
@@ -31,6 +32,8 @@
     "@angular/router": "^21.1.0",
     "@ng-icons/core": "^33.2.3",
     "@ng-icons/feather-icons": "^33.2.3",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -38,11 +41,16 @@
     "@angular/build": "^21.1.1",
     "@angular/cli": "^21.1.1",
     "@angular/compiler-cli": "^21.1.0",
+    "@eslint/js": "^10.0.1",
     "@tailwindcss/postcss": "^4.1.12",
+    "angular-eslint": "21.4.0",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.3.0",
     "typescript": "~5.9.2",
+    "typescript-eslint": "8.59.2",
     "vitest": "^4.0.8"
   }
 }
