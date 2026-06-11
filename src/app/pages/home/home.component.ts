@@ -5,7 +5,7 @@ import { ProductComponent } from '../../components/product/product.component';
 
 @Component({
   imports: [HeroComponent, ProductComponent],
-  selector: 'app-home',
+  selector: 'monauppi-home',
   templateUrl: 'home.component.html',
 })
 export class HomeComponent {

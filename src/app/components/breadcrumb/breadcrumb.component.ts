@@ -4,7 +4,7 @@ import { featherMenu } from '@ng-icons/feather-icons';
 
 @Component({
   imports: [NgIcon],
-  selector: 'app-breadcrumb',
+  selector: 'monauppi-breadcrumb',
   templateUrl: 'breadcrumb.component.html',
   viewProviders: [provideIcons({ featherMenu })],
   host: { class: 'sticky z-20 top-0 inset-s-0' },

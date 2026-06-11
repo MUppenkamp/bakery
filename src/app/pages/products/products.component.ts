@@ -4,7 +4,7 @@ import { ProductsService } from '../../services/products.services';
 
 @Component({
   imports: [ProductComponent],
-  selector: 'app-products',
+  selector: 'monauppi-products',
   templateUrl: 'products.component.html',
 })
 export class ProductsComponent {
