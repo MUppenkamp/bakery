@@ -67,14 +67,6 @@
     @apply text-2xl max-sm:text-xl font-semibold;
   }
 
-  a {
-    @apply text-bakery-text-soft no-underline;
-  }
-
-  a:hover {
-    @apply text-bakery-accent-green-hover;
-  }
-
   .title-xl {
     @apply text-bakery-heading text-5xl font-bold;
   }
@@ -87,12 +79,8 @@
     @apply text-bakery-heading text-xl font-bold;
   }
 
-  button {
-    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3 active:scale-95 active:shadow-none outline-0 outline-none;
-  }
-
   .button {
-    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3 active:scale-95 active:shadow-none;
+    @apply transition-colors duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3 active:scale-95 active:shadow-none outline-0 outline-none;
   }
 
   .button-primary {
@@ -107,7 +95,19 @@
     @apply bg-bakery-button-soft-bg border-bakery-button-soft-border hover:bg-bakery-button-soft-bg-hover hover:border-bakery-button-soft-border-hover focus:bg-bakery-button-soft-bg-hover focus:border-bakery-button-soft-border-hover active:bg-bakery-button-soft-border active:border-bakery-button-soft-border-hover;
   }
 
-  ng-icon {
-    @apply w-5! h-5! cursor-pointer transition-colors duration-200;
+  .link {
+    @apply text-bakery-text-soft no-underline transition-colors duration-200;
+  }
+
+  .link:hover {
+    @apply text-bakery-accent-green-hover;
+  }
+
+  .link:visited {
+    @apply text-bakery-text-soft;
+  }
+
+  .link:visited:hover {
+    @apply text-bakery-accent-green-hover;
   }
 }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { featherMenu } from '@ng-icons/feather-icons';
+import { LinkComponent } from "../link/link.component";
 
 @Component({
-  imports: [NgIcon],
+  imports: [NgIcon, LinkComponent],
   selector: 'monauppi-breadcrumb',
   templateUrl: 'breadcrumb.component.html',
   viewProviders: [provideIcons({ featherMenu })],
