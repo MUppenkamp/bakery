@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgIcon, provideIcons } from '@ng-icons/core';
+import { provideIcons } from '@ng-icons/core';
 import { featherMenu } from '@ng-icons/feather-icons';
-import { LinkComponent } from "../link/link.component";
+import { LinkComponent } from '../link/link.component';
 
 @Component({
-  imports: [NgIcon, LinkComponent],
+  imports: [LinkComponent],
   selector: 'monauppi-breadcrumb',
   templateUrl: 'breadcrumb.component.html',
   viewProviders: [provideIcons({ featherMenu })],
@@ -13,10 +13,10 @@ import { LinkComponent } from "../link/link.component";
 export class BreadcrumbComponent {
   protected readonly items = [
     // TODO Maybe an icon to go to homepage
-    { url: '', name: '🤎' },
-    { url: '/Über', name: 'Über mich :)' },
+    // { url: '', name: '🤎' },
+    // { url: '/Über', name: 'Über mich :)' },
     { url: '/Produkte', name: 'Produkte' },
-    { url: '/Blog', name: 'Blog' },
+    // { url: '/Blog', name: 'Blog' },
     { url: '/Kontakt', name: 'Kontakt' },
   ];
 }
