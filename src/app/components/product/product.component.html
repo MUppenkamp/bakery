@@ -16,15 +16,14 @@
       {{ product.description }}
     </p>
     <!-- TODO https://github.com/MUppenkamp/bakery/issues/8 -->
-    <div class="">{{ product.price | currency: 'EUR' }}</div>
+    <div>{{ product.price | currency: 'EUR' }}</div>
 
-    <div>
-      <button
-        class="button-primary px-3 py-1"
-        (click)="productsService.updateSelectedProducts(product.id, 1)"
-      >
-        Hinzufügen
-      </button>
-    </div>
+    <monauppi-button
+      [variant$]="'primary'"
+      [additionalClasses$]="'px-3 py-1'"
+      (clicked)="productsService.updateSelectedProducts(product.id, -1)"
+    >
+      Hinzufügen
+    </monauppi-button>
   </div>
 </div>
