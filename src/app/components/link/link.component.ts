@@ -1,10 +1,12 @@
-// link.component.ts
 import { Component, input, computed } from '@angular/core';
 import { LinkAppearance, LinkTarget, LinkVariant } from './link.type';
 
 @Component({
   selector: 'monauppi-link',
   templateUrl: './link.component.html',
+  host: {
+    '[class]': 'linkClass$()',
+  },
 })
 export class LinkComponent {
   public href$ = input.required<string>();
