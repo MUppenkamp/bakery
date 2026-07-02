@@ -27,6 +27,8 @@
   --color-bakery-button-soft-bg-hover: rgba(170, 200, 160, 0.5);
   --color-bakery-button-soft-border: rgb(170, 200, 160);
   --color-bakery-button-soft-border-hover: rgb(150, 180, 140);
+
+  --spacing-content: 60ch;
 }
 
 @layer base {
