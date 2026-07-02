@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-1.5">
+  @if (label$()) {
+    <label [for]="inputId$()" class="text-sm font-medium text-bakery-heading">
+      {{ label$() }}
+    </label>
+  }
+
+  <input
+    [id]="inputId$()"
+    [type]="type$()"
+    [placeholder]="placeholder$()"
+    [value]="value$()"
+    (input)="value$.set($event.target.value)"
+    class="transition-colors duration-200 shadow-xs text-bakery-text border-2 border-transparent outline-1 rounded-2xl px-5 py-3 bg-white outline-bakery-button-soft-border placeholder:text-bakery-text-soft hover:outline-bakery-button-soft-border-hover focus:outline-bakery-accent-green focus:outline-2"
+    [ngClass]="error$() ? 'outline-red-400' : ''"
+  />
+
+  @if (error$()) {
+    <span class="text-sm text-red-500">{{ error$() }}</span>
+  }
+</div>
