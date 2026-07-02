@@ -1,3 +1,8 @@
 <div class="p-6">
   <h2 class="text-center uppercase mb-10">Kontakt</h2>
+  <div class="flex flex-col gap-6 max-w-content mx-auto">
+    <monauppi-input [placeholder$]="'Name'" [(value$)]="name$" />
+    <monauppi-input [placeholder$]="'E-Mail'" [(value$)]="email$" />
+    <monauppi-textarea [placeholder$]="'Nachricht'" [(value$)]="message$" />
+  </div>
 </div>

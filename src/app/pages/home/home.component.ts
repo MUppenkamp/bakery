@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { ProductsService } from '../../services/products.services';
-import { ProductComponent } from '../../components/product/product.component';
 
 @Component({
-  imports: [HeroComponent, ProductComponent],
+  imports: [HeroComponent],
   selector: 'monauppi-home',
   templateUrl: 'home.component.html',
 })
