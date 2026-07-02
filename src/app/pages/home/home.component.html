@@ -1,8 +1,3 @@
 <monauppi-hero />
 <div class="p-6">
-  <div class="flex gap-4 overflow-x-auto pb-4">
-    @for (card of productsService.favoriteProducts$(); track card.id) {
-      <monauppi-product [product$]="card" />
-    }
-  </div>
 </div>
