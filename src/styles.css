@@ -87,7 +87,6 @@
     @apply text-bakery-heading text-xl font-bold;
   }
 
-  /* TODO https://github.com/MUppenkamp/bakery/issues/9 */
   button {
     @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3 active:scale-95 active:shadow-none outline-0 outline-none;
   }
