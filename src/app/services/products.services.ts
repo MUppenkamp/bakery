@@ -1,61 +1,18 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { Product, ProductTag } from '../types/product.types';
+import { Product } from '../types/product.types';
+import { products } from './products.data';
 
 @Injectable({ providedIn: 'root' })
 export class ProductsService {
   /**
    * List of products
-   * TODO https://github.com/MUppenkamp/bakery/issues/6
    */
-  public products$ = signal<Product[]>([
-    {
-      id: '1',
-      name: 'Hefe-Dinkelbrot',
-      description:
-        'Mein OG Brot, das ich schon seit Jahren backe und das immer super ankommt. Es ist ein sehr saftiges Brot mit einer knusprigen Kruste und einem tollen Geschmack.',
-      price: 4,
-      imageUrl: '/bread-and-cake.jpg',
-      tags: [ProductTag.Bread, ProductTag.Vegan],
-      category: 'Brot',
-      isFavorite: true,
-    },
-    {
-      id: '2',
-      name: 'Dinkel-Sauerteigbrot',
-      description:
-        'Mein OG Brot, das ich schon seit Jahren backe und das immer super ankommt. Es ist ein sehr saftiges Brot mit einer knusprigen Kruste und einem tollen Geschmack.',
-      price: 4,
-      imageUrl: '/bread-and-cake.jpg',
-      tags: [ProductTag.Bread, ProductTag.Vegan],
-      category: 'Brot',
-    },
-    {
-      id: '3',
-      name: 'American Cookies',
-      description:
-        'Mein OG Brot, das ich schon seit Jahren backe und das immer super ankommt. Es ist ein sehr saftiges Brot mit einer knusprigen Kruste und einem tollen Geschmack.',
-      price: 4,
-      imageUrl: '/bread-and-cake.jpg',
-      tags: [ProductTag.Bread, ProductTag.Vegan],
-      category: 'Gebäck',
-    },
-    {
-      id: '4',
-      name: 'Erdbeer-Sahne-Torte',
-      description:
-        'Mein OG Brot, das ich schon seit Jahren backe und das immer super ankommt. Es ist ein sehr saftiges Brot mit einer knusprigen Kruste und einem tollen Geschmack.',
-      price: 4,
-      imageUrl: '/bread-and-cake.jpg',
-      tags: [ProductTag.Bread, ProductTag.Vegan],
-      category: 'Kuchen',
-      isFavorite: true,
-    },
-  ]);
+  public readonly products$ = signal<Product[]>(products);
 
   /**
    * Record containing the id of the product and the selected amount
    */
-  private _selectedProducts$ = signal<Record<string, number>>({});
+  private readonly _selectedProducts$ = signal<Record<string, number>>({});
 
   /**
    * @see _selectedProducts$

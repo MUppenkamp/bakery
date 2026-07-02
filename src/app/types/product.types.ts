@@ -3,10 +3,22 @@ export type Product = {
   name: string;
   description?: string;
   price: number;
+  costPrice: number;
   imageUrl?: string;
   tags: ProductTag[];
   category: 'Brot' | 'Kuchen' | 'Gebäck';
   isFavorite?: boolean;
+  options?: ProductOption[];
+};
+
+/**
+ * Additional option to choose from
+ */
+export type ProductOption = {
+  id: string;
+  name: string;
+  description?: string;
+  extraCharge: number;
 };
 
 /**
@@ -20,4 +32,6 @@ export enum ProductTag {
   Vegan,
   Gluten,
   GlutenFree,
+  Sourdough,
+  Yeast
 }
