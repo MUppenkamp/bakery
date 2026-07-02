@@ -17,12 +17,12 @@ export class ProductsService {
   /**
    * @see _selectedProducts$
    */
-  public selectedProducts$ = computed<Record<string, number>>(() => this._selectedProducts$());
+  public readonly selectedProducts$ = computed<Record<string, number>>(() => this._selectedProducts$());
 
   /**
    * Contains the products grouped by category. The key is the category and the value is an array of products in that category.
    */
-  public productsByCategory$ = computed<Map<string, Product[]>>(() => {
+  public readonly productsByCategory$ = computed<Map<string, Product[]>>(() => {
     const products = this.products$();
     const productsByCategory = new Map<string, Product[]>();
 
@@ -42,7 +42,7 @@ export class ProductsService {
   /**
    * Contains the products that are marked as favorite
    */
-  public favoriteProducts$ = computed<Product[]>(() => {
+  public readonly favoriteProducts$ = computed<Product[]>(() => {
     const products = this.products$();
     return products.filter((product) => product.isFavorite);
   });
