@@ -87,23 +87,23 @@
 
   /* TODO https://github.com/MUppenkamp/bakery/issues/9 */
   button {
-    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3;
+    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3 active:scale-95 active:shadow-none outline-0 outline-none;
   }
 
   .button {
-    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3;
+    @apply transition-all duration-200 shadow-xs text-white border cursor-pointer font-medium rounded-2xl px-5 py-3 active:scale-95 active:shadow-none;
   }
 
   .button-primary {
-    @apply bg-bakery-button-primary-bg border-bakery-button-primary-border hover:bg-bakery-button-primary-bg-hover hover:border-bakery-button-primary-border-hover;
+    @apply bg-bakery-button-primary-bg border-bakery-button-primary-border hover:bg-bakery-button-primary-bg-hover hover:border-bakery-button-primary-border-hover focus:bg-bakery-button-primary-bg-hover focus:border-bakery-button-primary-border-hover active:bg-bakery-button-primary-border active:border-bakery-button-primary-border-hover;
   }
 
   .button-secondary {
-    @apply bg-transparent border-white hover:bg-white/10 hover:border-bakery-accent-light-brown;
+    @apply bg-transparent border-white hover:bg-white/10 hover:border-bakery-accent-light-brown focus:bg-white/10 focus:border-bakery-accent-light-brown active:bg-white/20 active:border-bakery-accent-light-brown;
   }
 
   .button-soft {
-    @apply bg-bakery-button-soft-bg border-bakery-button-soft-border hover:bg-bakery-button-soft-bg-hover hover:border-bakery-button-soft-border-hover;
+    @apply bg-bakery-button-soft-bg border-bakery-button-soft-border hover:bg-bakery-button-soft-bg-hover hover:border-bakery-button-soft-border-hover focus:bg-bakery-button-soft-bg-hover focus:border-bakery-button-soft-border-hover active:bg-bakery-button-soft-border active:border-bakery-button-soft-border-hover;
   }
 
   ng-icon {
